@@ -6,8 +6,8 @@
 
 - make sure installer host uses '/usr/libexec/platform-python' instead of /usr/bin/python.
   check with below commands:
-   - which python
-    # there shold be no python on CentOS8 systems
+   - which python  # it returns no python found.
+     there should be no python on CentOS8 systems, it has its inbuilt python interpreter.
 
    - it could that default python is setup using alternatives command, remove it.
      alternatives --list
