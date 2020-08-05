@@ -4,6 +4,7 @@
 # These hostname must be resolvable from your deployment host
 ost-ctl1-c7-19-fl
 ost-ctl2-d9-21-fl
+ost-ctl3-d16-19-fl
 
 # The above can also be specified as follows:
 #control[01:03]     ansible_user=kolla
