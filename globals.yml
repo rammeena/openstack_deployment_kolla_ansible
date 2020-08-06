@@ -706,7 +706,7 @@ nova_safety_upgrade: "yes"
 ################################
 # External MariaDB Load Balancer
 ################################
-database_address: 172.23.16.16
+database_address: db-vip-pod-vmm2-fl
 enable_mariadb: "no"
 #use_preconfigured_databases: "yes"
 #

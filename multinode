@@ -108,7 +108,7 @@ rabbitmq
 #[mariadb:children]
 #control
 [mariadb]
-172.23.16.16
+db-vip-pod-vmm2-fl
 
 #[rabbitmq:children]
 #control
