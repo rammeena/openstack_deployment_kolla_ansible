@@ -706,7 +706,7 @@ nova_safety_upgrade: "yes"
 ################################
 # External MariaDB Load Balancer
 ################################
-database_address: 172.23.23.10
+database_address: 172.23.16.17
 enable_mariadb: "no"
 #use_preconfigured_databases: "yes"
 #
