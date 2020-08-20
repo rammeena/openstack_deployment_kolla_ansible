@@ -2,7 +2,20 @@
 
 # Prepare Python 3 Virtual Environment for kolla-ansible
 
+- dnf install git -y
+
+- cat .ssh/config
+  Host *
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    User centos
+
+  Host github.com
+        Hostname ssh.github.com
+        Port    443
+
 - clone this repo in home directory of installer host
+  git clone git@github.com:rammeena/openstack_deployment_kolla_ansible.git
 
 - make sure installer host uses '/usr/libexec/platform-python' instead of /usr/bin/python.
   check with below commands:
@@ -25,7 +38,8 @@
   pip install kolla-ansible
 
 - create ansible config file
-  mkdir /etc/ansible/ansible.cfg
+  mkdir /etc/ansible
+  vim /etc/ansible/ansible.cfg
   [defaults]
   host_key_checking=False
   pipelining=True
