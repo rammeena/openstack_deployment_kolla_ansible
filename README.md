@@ -1,7 +1,5 @@
 # openstack_deployment_using_kolla_ansible
 
-# Prepare Python 3 Virtual Environment for kolla-ansible
-
 - dnf install git -y
 
 - cat .ssh/config
@@ -47,10 +45,13 @@
 
 - Now Copy kolla-ansible config files from this repo to /etc/kolla directory
   mkdir /etc/kolla
-  cp -v globals.yml /etc/kolla/
-  cp -v passwords.yml /etc/kolla/
-  cp -vr config /etc/kolla/
+  mkdir /etc/kolla/config
+  cp -v node_custom_config/globals.yml /etc/kolla/
+  cp -v node_custom_config/passwords.yml /etc/kolla/
+  cp -vr node_custom_config/* /etc/kolla/config/
 
 - Copy inventory file multinode at location where you want to run kolla ansible commands.
+
+# Follow instruction in node_custom_config/README.md
 
 - Now run kolla ansible precheck command or ansible ping command to check if things are working.

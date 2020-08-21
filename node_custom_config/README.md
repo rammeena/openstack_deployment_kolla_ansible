@@ -20,6 +20,10 @@ this is for common applications.
 /root/.venvs/kolla/share/kolla-ansible/ansible/roles/cinder/templates/cinder.conf.j2
 /root/.venvs/kolla/share/kolla-ansible/ansible/roles/cinder/tasks/external_ceph.yml
 
-Before preparing cluster make sure you make these changes in kolla-ansible source code.
+# Nova change for ceph multi backend rbd2 cinder
+/root/.venvs/kolla/share/kolla-ansible/ansible/roles/nova-cell/tasks/external_ceph.yml
+
+# Note:
+```Before preparing cluster make sure you make these changes in kolla-ansible source code.```
 
 # Also globals.yml was modified to include extra variable for multi backend.
