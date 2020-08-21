@@ -1,6 +1,6 @@
-[DEFAULT]
 # file location:
 # /root/.venvs/kolla/share/kolla-ansible/ansible/roles/cinder/templates/cinder.conf.j2
+[DEFAULT]
 debug = {{ cinder_logging_debug }}
 
 log_dir = /var/log/kolla/cinder
@@ -152,7 +152,7 @@ rbd_max_clone_depth = 5
 rbd_store_chunk_size = 4
 rados_connect_timeout = 5
 rbd_user = cinder_ssd
-rbd_secret_uuid = 0041597d-5eb2-4973-b5b8-ec769948cbbb
+rbd_secret_uuid = {{ cinder_rbd2_secret_uuid }}
 report_discard_supported = True
 image_upload_use_cinder_backend = True
 
