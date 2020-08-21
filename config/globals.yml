@@ -412,10 +412,18 @@ ceph_cinder_pool_name: "volumes"
 ceph_cinder_backup_keyring: "ceph.client.cinder-backup.keyring"
 ceph_cinder_backup_user: "cinder-backup"
 ceph_cinder_backup_pool_name: "backups"
+
+# Cinder multi backend ceph - rbd2 configuration
+cinder_mutli_ceph_backend: yes
+ceph_cinder_rbd2_keyring: "ceph.client.cinder_ssd.keyring"
+cinder_rbd2_secret_uuid: '0041597d-5eb2-4973-b5b8-ec769948cbbb'
+
 # Nova
 #ceph_nova_keyring: "{{ ceph_cinder_keyring }}"
 #ceph_nova_user: "nova"
 #ceph_nova_pool_name: "vms"
+#
+#
 # Gnocchi
 #ceph_gnocchi_keyring: "ceph.client.gnocchi.keyring"
 #ceph_gnocchi_user: "gnocchi"
@@ -490,7 +498,6 @@ glance_backend_ceph: "yes"
 ################################
 # Enable / disable Cinder backends
 cinder_backend_ceph: "yes"
-cinder_mutli_ceph_backend: "yes"
 #cinder_backend_vmwarevc_vmdk: "no"
 #cinder_volume_group: "cinder-volumes"
 # Valid options are [ '', redis, etcd ]
